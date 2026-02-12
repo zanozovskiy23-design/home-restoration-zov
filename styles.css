@@ -11,11 +11,18 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
-.header {
-  background: #111;
-  color: #fff;
+/* HERO (WALLPAPER) */
+.hero {
+  background-image: url("images/Living.jpeg"); /* change to another image if you want */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.55);
   padding: 16px;
+  min-height: 230px;
+  color: #fff;
 }
 
 .header-inner {
@@ -27,30 +34,59 @@ body {
 .logo {
   background: #f2c94c;
   color: #111;
-  font-weight: 700;
+  font-weight: 800;
   padding: 10px 14px;
-  border-radius: 10px;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
 }
 
 .company h1 {
   font-size: 18px;
+  line-height: 1.2;
 }
 
 .company p {
   font-size: 13px;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
+/* NAV */
 .nav {
   margin-top: 12px;
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .nav a {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
+  opacity: 0.95;
+}
+
+/* HERO BUTTONS */
+.hero-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #f2c94c;
+  color: #111;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.7);
+  color: #fff;
 }
 
 /* SECTIONS */
@@ -62,7 +98,18 @@ body {
 }
 
 .section h2 {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.muted {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.note {
+  margin-top: 10px;
+  font-size: 13px;
 }
 
 /* SERVICES */
@@ -80,6 +127,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 16px;
+  margin-top: 10px;
 }
 
 .gallery img {
@@ -95,10 +143,40 @@ body {
   text-decoration: none;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.label {
+  font-size: 12px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
 /* FOOTER */
 .footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
   color: #666;
+}
+
+/* Desktop tweaks */
+@media (min-width: 900px) {
+  .hero-overlay {
+    min-height: 260px;
+    padding: 22px;
+  }
+
+  .company h1 {
+    font-size: 22px;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
