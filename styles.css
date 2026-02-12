@@ -56,4 +56,14 @@ body {
 
 .muted {
   color: #777;
+}/* HERO wallpaper */
+.hero{
+  min-height: 90vh;
+  display:flex;
+  align-items:center;
+  padding:60px 20px;
+  color:#fff;
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("IMG_1979.jpeg") center/cover no-repeat;
 }
