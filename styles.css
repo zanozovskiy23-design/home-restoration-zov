@@ -297,5 +297,9 @@ h2{
   }
   .contact-box{
     grid-template-columns: 1fr;
-  }
-}
+  }.photo-grid img {
+  width: 100%;
+  height: 220px;          /* 👈 головне */
+  object-fit: cover;      /* 👈 обрізає красиво */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
