@@ -1,305 +1,104 @@
-* { box-sizing: border-box; }
-
-:root{
-  --bg: #0b0b0b;
-  --text: #111;
-  --muted: #666;
-  --card: #ffffff;
-  --alt: #f6f7f8;
-  --accent: #22c55e;
-}
-
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  color: var(--text);
-  background: #fff;
-}
-
-a{ color: inherit; }
-
-.container{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 18px;
-}
-
-/* TOPBAR */
-.topbar{
-  background: var(--bg);
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-
-.topbar__inner{
-  display:flex;
-  gap: 18px;
-  align-items:center;
-  justify-content: space-between;
-  padding: 14px 0;
-}
-
-.brand{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  min-width: 220px;
-}
-
-.brand__badge{
-  background: #f5c542;
-  color: #111;
-  font-weight: 800;
-  padding: 10px 14px;
-  border-radius: 10px;
-  letter-spacing: .5px;
-}
-
-.brand__title{
-  font-weight: 800;
-  line-height: 1.1;
-}
-
-.brand__sub{
-  font-size: 13px;
-  opacity: .85;
-}
-
-.nav{
-  display:flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.nav a{
-  color:#fff;
-  text-decoration:none;
-  font-weight: 600;
-  opacity: .9;
-}
-
-.nav a:hover{ opacity: 1; text-decoration: underline; }
-
-/* HERO */
-.hero{
-  min-height: 88vh;
-  display:flex;
-  align-items:center;
-  color:#fff;
-  background:
-    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-    url("IMG_1979.jpeg") center/cover no-repeat;
-}
-
-.hero__content{
-  padding: 54px 0;
-}
-
-.hero h1{
-  margin: 0 0 12px 0;
-  font-size: clamp(28px, 5vw, 52px);
-  line-height: 1.1;
-}
-
-.hero p{
-  margin: 0 0 18px 0;
-  max-width: 780px;
-  font-size: 18px;
-  opacity: .95;
-}
-
-.cta-row{
-  display:flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 16px 0;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 12px 16px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,.25);
-  background: rgba(255,255,255,.12);
-  color: #fff;
-  text-decoration:none;
-  font-weight: 700;
-  backdrop-filter: blur(6px);
-}
-
-.btn:hover{
-  background: rgba(255,255,255,.18);
-}
-
-.btn.primary{
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #0b1f13;
-}
-
-.badges{
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 6px;
-}
-
-.badge{
-  background: rgba(255,255,255,.10);
-  border: 1px solid rgba(255,255,255,.18);
-  padding: 8px 10px;
-  border-radius: 10px;
-  font-weight: 700;
-}
-
-.contact-mini{
-  margin-top: 16px;
-  display: grid;
-  gap: 6px;
-  max-width: 520px;
-  background: rgba(0,0,0,.25);
-  border: 1px solid rgba(255,255,255,.14);
-  padding: 14px;
-  border-radius: 12px;
-}
-
-.contact-mini a{
-  color: #fff;
-  text-decoration: underline;
-}
-
-/* SECTIONS */
-.section{
-  padding: 44px 0;
-}
-
-.section--alt{
-  background: var(--alt);
-}
-
-h2{
-  margin: 0 0 10px 0;
-  font-size: 30px;
-}
-
-.lead{
-  margin: 0 0 18px 0;
-  color: var(--muted);
-}
-
-.list{
+* {
+  box-sizing: border-box;
   margin: 0;
-  padding-left: 18px;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-.list li{
-  margin: 10px 0;
-  line-height: 1.45;
+body {
+  background: #f4f4f4;
+  color: #222;
+  line-height: 1.6;
 }
 
-/* GRID */
-.photo-grid{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.photo-card{
-  min-height: 140px;
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  border-radius: 12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color: #777;
-  font-weight: 700;
-}
-
-/* ABOUT CARDS */
-.two-col{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 14px;
-}
-
-.card{
-  background: var(--card);
-  border: 1px solid #e9e9e9;
-  border-radius: 14px;
+/* HEADER */
+.header {
+  background: #111;
+  color: #fff;
   padding: 16px;
 }
 
-.card h3{
-  margin-top: 0;
-}
-
-/* CONTACT */
-.contact-box{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.header-inner {
+  display: flex;
+  align-items: center;
   gap: 12px;
-  margin: 16px 0;
 }
 
-.contact-item{
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  border-radius: 12px;
-  padding: 14px;
+.logo {
+  background: #f2c94c;
+  color: #111;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: 10px;
 }
 
-.label{
-  font-size: 12px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: .6px;
-  margin-bottom: 6px;
+.company h1 {
+  font-size: 18px;
 }
 
-.value a{
-  color: #0b0b0b;
-  font-weight: 800;
+.company p {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+}
+
+.nav a {
+  color: #fff;
   text-decoration: none;
-}
-
-.value a:hover{ text-decoration: underline; }
-
-/* FOOTER */
-.footer{
-  background: var(--bg);
-  color:#fff;
-  padding: 18px 0;
-  text-align:center;
   font-size: 14px;
 }
 
-/* MOBILE */
-@media (max-width: 720px){
-  .topbar__inner{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav{
-    justify-content: flex-start;
-  }
-  .photo-grid{
-    grid-template-columns: 1fr;
-  }
-  .two-col{
-    grid-template-columns: 1fr;
-  }
-  .contact-box{
-    grid-template-columns: 1fr;
-  }.photo-grid img {
-  width: 100%;
-  height: 220px;         
-  object-fit: cover;     
+/* SECTIONS */
+.section {
+  background: #fff;
+  margin: 16px;
+  padding: 20px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.section h2 {
+  margin-bottom: 12px;
+}
+
+/* SERVICES */
+.services {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+.services li {
+  margin-bottom: 8px;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* CONTACT */
+.contact a {
+  color: #111;
+  text-decoration: none;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+}
